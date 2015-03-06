@@ -44,7 +44,7 @@ for(var nom in Game.creeps) {
 }
 
 if(nbHavester<3){
-    harvester.create(1);
+    harvester.create(0);
 }else if(false){
     Game.spawns.Spawn1.createCreep([Game.MOVE,Game.CARRY,Game.WORK,Game.WORK,Game.WORK],null,{role: 'builder'});
 }else if(nbGuard<3){
@@ -52,7 +52,7 @@ if(nbHavester<3){
 }else if(nbMedic<2){
     medic.create();
 }else if(nbHavester2<3){
-    harvester.create(2);
+    harvester.create(1);
 }else{
     if(ranged){
         Game.spawns.Spawn1.createCreep([Game.MOVE,Game.MOVE,Game.RANGED_ATTACK,Game.TOUGH],null,{role: 'rangedGuard'});
