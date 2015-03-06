@@ -16,12 +16,12 @@ for(var nom in Game.creeps) {
 	switch(creep.memory.role) {
 	    case 'harvester':
         	harvester.doSomething(creep,0);
-	    	nbHavester++;
-	    	break;
+  	    	nbHavester++;
+  	    	break;
 	    case 'harvester2':
 	        harvester.doSomething(creep,1);
-		    nbHavester2++;
-		    break;
+  		    nbHavester2++;
+  		    break;
 	    case 'builder':
 	        builder(creep);
 	        nbBuilder++;
@@ -31,10 +31,10 @@ for(var nom in Game.creeps) {
     	    nbGuard++;
     	    break;
         case 'rangedGuard':
-            rangedGuard(creep);
-            break;
+          rangedGuard(creep);
+          break;
         case 'medic':
-            medic.doSomething(creep);
+          medic.doSomething(creep);
     	    nbMedic++;
     	    break;
     	default:
@@ -44,7 +44,7 @@ for(var nom in Game.creeps) {
 }
 
 if(nbHavester<3){
-    harvester.create(0);
+    harvester.create(1);
 }else if(false){
     Game.spawns.Spawn1.createCreep([Game.MOVE,Game.CARRY,Game.WORK,Game.WORK,Game.WORK],null,{role: 'builder'});
 }else if(nbGuard<3){
@@ -52,7 +52,7 @@ if(nbHavester<3){
 }else if(nbMedic<2){
     medic.create();
 }else if(nbHavester2<3){
-    harvester.create(1);
+    harvester.create(2);
 }else{
     if(ranged){
         Game.spawns.Spawn1.createCreep([Game.MOVE,Game.MOVE,Game.RANGED_ATTACK,Game.TOUGH],null,{role: 'rangedGuard'});
