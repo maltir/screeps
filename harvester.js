@@ -20,9 +20,9 @@ harvester.prototype.harvest=function(creep,source,otherSources){
           })
         }
       }
-    ).id;
-		creep.moveTo(sources[source]);
-		creep.harvest(sources[source]);
+    );
+		creep.moveTo(sources);
+		creep.harvest(sources);
 	}
 	else {
 		creep.moveTo(Game.spawns.Spawn1);
