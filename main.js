@@ -19,7 +19,7 @@ for(var nom in Game.creeps) {
   	    	nbHavester++;
   	    	break;
 	    case 'harvester2':
-	        harvester.doSomething(creep,1);
+	        harvester.doSomething(creep,1,[0]);
   		    nbHavester2++;
   		    break;
 	    case 'builder':
