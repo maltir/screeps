@@ -1,10 +1,6 @@
  module.exports = function(creep){
-    var targets = creep.room.find(Game.HOSTILE_CREEPS,{
-      filter: function(obj){
-        return obj.owner!="Source Keeper"
-      }
-    });
-  	if(targets.length) {
+    var targets = creep.pos.findClosest(Game.HOSTILE_CREEPS);
+  	if(targets.length && targest.owner != "Source Keeper" ) {
   		creep.moveTo(targets[0]);
   		creep.attack(targets[0]);
   	}
