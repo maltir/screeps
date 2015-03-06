@@ -1,8 +1,7 @@
  module.exports = function(creep){
     var targets = creep.room.find(Game.HOSTILE_CREEPS,{
       filter: function(obj){
-        if(obj.owner!="Source Keeper")
-          return obj;
+        return obj.owner!="Source Keeper"
       }
     });
   	if(targets.length) {
