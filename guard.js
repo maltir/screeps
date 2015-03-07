@@ -1,5 +1,5 @@
  module.exports = function(creep){
-    var target = creep.pos.findClosest(Game.HOSTILE_CREEPS, {
+    var target = creep.pos.findClosest(creep.pos.findInRange(Game.HOSTILE_CREEPS, 10), {
       filter: function(object) {
         return object.owner.username !== 'Source Keeper'}
     });
