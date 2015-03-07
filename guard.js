@@ -1,7 +1,7 @@
  module.exports = function(creep){
-    var targets = creep.pos.findClosest(Game.HOSTILE_CREEPS);
-  	if(targets.length && targest.owner != "Source Keeper" ) {
-  		creep.moveTo(targets[0]);
-  		creep.attack(targets[0]);
+    var target = creep.pos.findClosest(Game.HOSTILE_CREEPS);
+  	if(target.owner != "Source Keeper" ) {
+  		creep.moveTo(target);
+  		creep.attack(target);
   	}
  }
