@@ -12,7 +12,7 @@ harvester.prototype.doSomething=function(creep,source){
 }
 harvester.prototype.harvest=function(creep,source,otherSources){
   if(creep.energy < creep.energyCapacity) {
-	  var sources = Game.spawns.Spawn1.pos.findClosest(Game.SOURCES);
+	  var sources = Game.spawns.Spawn1.pos.findClosest(Game.SOURCES, {ignoreCreeps: true});
 		creep.moveTo(sources);
 		creep.harvest(sources);
 	}
