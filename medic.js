@@ -8,8 +8,4 @@ module.exports = function (creep) {
       creep.moveTo(target);
       creep.heal(target);
   }
-
-  function create(){
-    Game.spawns.Spawn1.createCreep([Game.MOVE,Game.MOVE,Game.HEAL,Game.HEAL,Game.HEAL],null,{role: 'medic'});
-  }
 }

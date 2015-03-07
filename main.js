@@ -50,7 +50,7 @@ if(nbHavester<3){
 }else if(nbGuard<3){
     Game.spawns.Spawn1.createCreep([Game.MOVE,Game.MOVE,Game.ATTACK,Game.ATTACK,Game.TOUGH],null,{role: 'guard'});
 }else if(nbMedic<2){
-    medic.create();
+    Game.spawns.Spawn1.createCreep([Game.MOVE,Game.MOVE,Game.HEAL,Game.HEAL,Game.HEAL],null,{role: 'medic'});
 }else if(nbHavester2<3){
     harvester.create(2);
 }else{
