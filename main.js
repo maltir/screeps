@@ -31,12 +31,12 @@ for(var nom in Game.creeps) {
     	    nbGuard++;
     	    break;
       case 'rangedGuard':
-        rangedGuard(creep);
-        break;
+          rangedGuard(creep);
+          break;
       case 'medic':
-        medic.doSomething(creep);
-  	    nbMedic++;
-  	    break;
+          medic(creep);
+    	    nbMedic++;
+    	    break;
     	default:
     	    console.log("FAIL: no role");
     	    break;
