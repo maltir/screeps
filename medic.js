@@ -1,4 +1,4 @@
- module.exports = new medic();
+module.exports = new medic();
 
  function medic(){}
  medic.prototype.create=function(){

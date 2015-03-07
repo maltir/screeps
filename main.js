@@ -30,13 +30,13 @@ for(var nom in Game.creeps) {
 	        guard(creep);
     	    nbGuard++;
     	    break;
-        case 'rangedGuard':
-          rangedGuard(creep);
-          break;
-        case 'medic':
-          medic.doSomething(creep);
-    	    nbMedic++;
-    	    break;
+      case 'rangedGuard':
+        rangedGuard(creep);
+        break;
+      case 'medic':
+        medic.doSomething(creep);
+  	    nbMedic++;
+  	    break;
     	default:
     	    console.log("FAIL: no role");
     	    break;
