@@ -48,17 +48,17 @@ if(nbHavester<3){
 }else if(false){
     Game.spawns.Spawn1.createCreep([Game.MOVE,Game.CARRY,Game.WORK,Game.WORK,Game.WORK],null,{role: 'builder'});
 }else if(nbGuard<3){
-    Game.spawns.Spawn1.createCreep([Game.MOVE,Game.MOVE,Game.ATTACK,Game.ATTACK,Game.TOUGH],null,{role: 'guard'});
+    Game.spawns.Spawn1.createCreep([Game.TOUGH,Game.MOVE,Game.MOVE,Game.ATTACK,Game.ATTACK],null,{role: 'guard'});
 }else if(nbMedic<2){
     Game.spawns.Spawn1.createCreep([Game.MOVE,Game.MOVE,Game.HEAL,Game.HEAL,Game.HEAL],null,{role: 'medic'});
 }else if(nbHavester2<3){
     harvester.create(2);
 }else{
     if(ranged){
-        Game.spawns.Spawn1.createCreep([Game.MOVE,Game.MOVE,Game.RANGED_ATTACK,Game.TOUGH],null,{role: 'rangedGuard'});
+        Game.spawns.Spawn1.createCreep([Game.TOUGH,Game.MOVE,Game.MOVE,Game.RANGED_ATTACK],null,{role: 'rangedGuard'});
         ranged=!ranged;
     }else{
-        Game.spawns.Spawn1.createCreep([Game.MOVE,Game.MOVE,Game.ATTACK,Game.ATTACK,Game.TOUGH],null,{role: 'guard'});
+        Game.spawns.Spawn1.createCreep([Game.TOUGH,Game.MOVE,Game.MOVE,Game.ATTACK,Game.ATTACK],null,{role: 'guard'});
         ranged=!ranged;
     }
 }
