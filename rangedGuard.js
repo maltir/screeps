@@ -6,5 +6,7 @@
   	if(target) {
   		creep.moveTo(target);
   		creep.rangedAttack(target);
+  	}else if(Game.flags.Flag1 !== undefined){
+  	  creep.moveTo(Game.flags.Flag1);
   	}
  }

@@ -7,5 +7,7 @@ module.exports = function (creep) {
   if(target) {
       creep.moveTo(target);
       creep.heal(target);
-  }
+  }else if(Game.flags.Flag1 !== undefined){
+	  creep.moveTo(Game.flags.Flag1);
+	}
 }
