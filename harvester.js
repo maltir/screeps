@@ -6,7 +6,10 @@ module.exports = function(creep){
   		creep.moveTo(sources);
   		creep.harvest(sources);
 
-  		var found = creep.room.lookForAt('creep', creep.memory.toDrop);
-      creep.transferEnergy(found);
+  		var target = creep.pos.findClosest(creep.pos.findInRange(Game.MY_CREEPS, 1), {
+        filter: function(object) {
+          return object.memory.role === 'transport'}
+      });
+      creep.transferEnergy(target);
   }
 }
