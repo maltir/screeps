@@ -1,5 +1,5 @@
-module.exports = function (creep) {
-  create: function(source){
+module.exports = {
+  create:function(source){
     if(source===1)
       Game.spawns.Spawn1.createCreep([Game.MOVE,Game.CARRY,Game.WORK,Game.WORK,Game.WORK],null,{role: 'harvester'});
     else
