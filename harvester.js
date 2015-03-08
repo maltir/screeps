@@ -1,10 +1,9 @@
-module.exports = function(creep){
+module.exports = function(creep,source){
   if(creep===null){
       Game.spawns.Spawn1.createCreep([Game.WORK,Game.WORK,Game.WORK,Game.MOVE,Game.CARRY],null,{role: 'harvester'});
   }else if(creep.energy <= creep.energyCapacity) {
-  	  var sources = Game.spawns.Spawn1.pos.findClosest(Game.SOURCES_ACTIVE, {ignoreCreeps: true});
-  		creep.moveTo(sources);
-  		creep.harvest(sources);
+  		creep.moveTo(source);
+  		creep.harvest(source);
 
   		var target = creep.pos.findClosest(Game.MY_CREEPS,{
         filter: function(object) {
