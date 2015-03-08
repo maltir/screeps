@@ -11,5 +11,6 @@ module.exports = function(creep){
           return object.memory.role === 'transport'}
       });
       creep.transferEnergy(target);
+      console.log(target);
   }
 }
