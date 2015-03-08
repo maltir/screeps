@@ -51,7 +51,7 @@ for(var nom in Game.creeps) {
 
 if(nbHavester<2){
     harvester(null);
-}else if(nbTransport<3){
+}else if(nbTransport<2){
     transport(null);
 }else if(nbGuard<3){
     Game.spawns.Spawn1.createCreep([Game.TOUGH,Game.MOVE,Game.MOVE,Game.ATTACK,Game.ATTACK],null,{role: 'guard'});

@@ -5,7 +5,7 @@ module.exports = function(creep){
     if(creep.energy < creep.energyCapacity){
       var target = creep.pos.findClosest(Game.MY_CREEPS, {
         filter: function(object) {
-          return object.memory.role === "harvester" || object.energy === object.energyCapacity;
+          return object.memory.role === "harvester";
         }
       });
       creep.moveTo(target);
