@@ -3,11 +3,13 @@ var builder = require('builder');
 var guard = require('guard');
 var rangedGuard = require('rangedGuard');
 var medic = require('medic');
+var transport = require('transport');
 var nbHavester=0;
 var nbHavester2=0;
 var nbBuilder=0;
 var nbGuard=0;
 var nbMedic=0;
+var nbTransport=0;
 var ranged=false;
 
 
@@ -37,6 +39,10 @@ for(var nom in Game.creeps) {
           medic(creep);
     	    nbMedic++;
     	    break;
+	    case 'transport':
+          transport(creep);
+    	    nbTransport++;
+    	    break;
     	default:
     	    console.log("FAIL: no role");
     	    break;
@@ -45,8 +51,8 @@ for(var nom in Game.creeps) {
 
 if(nbHavester<2){
     harvester(null);
-}else if(false){
-    Game.spawns.Spawn1.createCreep([Game.MOVE,Game.CARRY,Game.WORK,Game.WORK,Game.WORK],null,{role: 'builder'});
+}else if(nbTransport<3){
+    transport(null);
 }else if(nbGuard<3){
     Game.spawns.Spawn1.createCreep([Game.TOUGH,Game.MOVE,Game.MOVE,Game.ATTACK,Game.ATTACK],null,{role: 'guard'});
 }else if(nbMedic<2){
@@ -65,3 +71,4 @@ nbBuilder=0;
 nbGuard=0;
 nbHavester2=0;
 nbMedic=0;
+nbTransport=0;

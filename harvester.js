@@ -5,8 +5,8 @@ module.exports = function(creep){
   	  var sources = Game.spawns.Spawn1.pos.findClosest(Game.SOURCES_ACTIVE, {ignoreCreeps: true});
   		creep.moveTo(sources);
   		creep.harvest(sources);
-  }else {
-		creep.moveTo(Game.spawns.Spawn1);
-		creep.transferEnergy(Game.spawns.Spawn1);
-	}
+
+  		var found = creep.room.lookForAt('creep', creep.memory.toDrop);
+      creep.transferEnergy(found);
+  }
 }
