@@ -11,17 +11,20 @@ var nbGuard=0;
 var nbMedic=0;
 var nbTransport=0;
 var ranged=false;
+var source;
 
+if(source===undefined)
+  source = Game.spawns.Spawn1.pos.findClosest(Game.SOURCES_ACTIVE, {ignoreCreeps: true});
 
 for(var nom in Game.creeps) {
 	var creep = Game.creeps[nom];
 	switch(creep.memory.role) {
 	    case 'harvester':
-        	harvester(creep);
+        	harvester(creep,source);
   	    	nbHavester++;
   	    	break;
 	    case 'harvester2':
-	        harvester(creep);
+	        harvester(creep,source);
   		    nbHavester2++;
   		    break;
 	    case 'builder':
