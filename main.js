@@ -13,9 +13,14 @@ var nbMedic=0;
 var nbTransport=0;
 var ranged=false;
 var source=null;
+var tough=1;
 
 if(source==null)
   source = Game.spawns.Spawn1.pos.findClosest(Game.SOURCES, {ignoreCreeps: true});
+
+if((Room.survivalInfo.wave/2)>1)
+  tough=Room.survivalInfo.wave/2;
+
 
 for(var nom in Game.creeps) {
 	var creep = Game.creeps[nom];

@@ -7,7 +7,18 @@ module.exports = function(){
     if(nbMedic<(nbGuard/3)){
       Game.spawns.Spawn1.createCreep([Game.TOUGH,Game.MOVE,Game.MOVE,Game.HEAL,Game.HEAL,Game.HEAL],null,{role: 'medic'});
     }else if(nbGuard<20){
-      Game.spawns.Spawn1.createCreep([Game.TOUGH,Game.MOVE,Game.MOVE,Game.ATTACK,Game.ATTACK,Game.ATTACK],null,{role: 'guard'});
+      var guardParts = new Array();
+      //tough part
+      for(var i=0;i<tough;i++)
+      {
+        guardParts.push(Game.TOUGH);
+      }
+      guardParts.push(Game.MOVE);
+      guardParts.push(Game.MOVE);
+      guardParts.push(Game.ATTACK);
+      guardParts.push(Game.ATTACK);
+      guardParts.push(Game.ATTACK);
+      Game.spawns.Spawn1.createCreep(guardParts,null,{role: 'guard'});
     }
   }
   nbHavester=0;
