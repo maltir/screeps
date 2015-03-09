@@ -11,9 +11,9 @@ var nbGuard=0;
 var nbMedic=0;
 var nbTransport=0;
 var ranged=false;
-var source;
+var source=null;
 
-if(source===undefined)
+if(source==null)
   source = Game.spawns.Spawn1.pos.findClosest(Game.SOURCES_ACTIVE, {ignoreCreeps: true});
 
 for(var nom in Game.creeps) {
