@@ -14,7 +14,7 @@ var ranged=false;
 var source=null;
 
 if(source==null)
-  source = Game.spawns.Spawn1.pos.findClosest(Game.SOURCES_ACTIVE, {ignoreCreeps: true});
+  source = Game.spawns.Spawn1.pos.findClosest(Game.SOURCES, {ignoreCreeps: true});
 
 for(var nom in Game.creeps) {
 	var creep = Game.creeps[nom];
