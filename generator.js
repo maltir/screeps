@@ -20,8 +20,7 @@ module.exports = function(){
       guardParts.push(Game.ATTACK);
       guardParts.push(Game.ATTACK);
       guardParts.push(Game.ATTACK);
-      var result = Game.spawns.Spawn1.createCreep(guardParts,null,{role: 'guard'});
-      result.say(count);
+      Game.spawns.Spawn1.createCreep(guardParts,null,{role: 'guard', puissance: count, dit:false});
     }
   }
   nbHavester=0;
