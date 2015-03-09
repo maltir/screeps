@@ -10,5 +10,9 @@ module.exports = function(creep,source){
           return object.memory.role === 'transport'}
       });
       creep.transferEnergy(target);
+      if(creep.ticksToLive < 150){
+        creep.say("I will die!!");
+        nbHavester--;
+      }
   }
 }
