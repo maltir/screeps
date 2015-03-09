@@ -7,8 +7,7 @@ module.exports = function(){
     if(nbMedic<(nbGuard/3)){
       Game.spawns.Spawn1.createCreep([Game.TOUGH,Game.MOVE,Game.MOVE,Game.HEAL,Game.HEAL,Game.HEAL],null,{role: 'medic'});
     }else if(nbGuard<20){
-      debugger;
-      var guardParts = new Array();
+      var guardParts = [];
       var count;
       //tough part
       for(var i=0;i<tough;i++)
