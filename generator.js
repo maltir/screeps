@@ -12,14 +12,14 @@ module.exports = function(){
       //tough part
       for(var i=0;i<tough;i++)
       {
-        guardParts.push(Game.TOUGH);
+        guardParts[guardParts.length]=Game.TOUGH;
         count++;
       }
-      guardParts.push(Game.MOVE);
-      guardParts.push(Game.MOVE);
-      guardParts.push(Game.ATTACK);
-      guardParts.push(Game.ATTACK);
-      guardParts.push(Game.ATTACK);
+      guardParts[guardParts.length]=Game.MOVE;
+      guardParts[guardParts.length]=Game.MOVE;
+      guardParts[guardParts.length]=Game.ATTACK;
+      guardParts[guardParts.length]=Game.ATTACK;
+      guardParts[guardParts.length]=Game.ATTACK;
       Game.spawns.Spawn1.createCreep(guardParts,null,{role: 'guard', puissance: count, dit:false});
     }
   }
