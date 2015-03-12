@@ -12,11 +12,10 @@ var nbGuard=0;
 var nbMedic=0;
 var nbTransport=0;
 var ranged=false;
-var source=null;
 var tough=1;
 
-if(source==null)
-  source = Game.spawns.Spawn1.pos.findClosest(Game.SOURCES, {ignoreCreeps: true});
+if(Game.spawns.Spawn1.memory.source)
+  Game.spawns.Spawn1.memory.source = Game.spawns.Spawn1.pos.findClosest(Game.SOURCES, {ignoreCreeps: true});
 
 if((Game.spawns.Spawn1.room.survivalInfo.wave/2)>1)
   tough=Game.spawns.Spawn1.room.survivalInfo.wave/2;
@@ -26,11 +25,11 @@ for(var nom in Game.creeps) {
 	var creep = Game.creeps[nom];
 	switch(creep.memory.role) {
 	    case 'harvester':
-        	harvester(creep,source);
+        	harvester(creep,Game.spawns.Spawn1.memory.source);
   	    	nbHavester++;
   	    	break;
 	    case 'harvester2':
-	        harvester(creep,source);
+	        harvester(creep,Game.spawns.Spawn1.memory.source2);
   		    nbHavester2++;
   		    break;
 	    case 'builder':
