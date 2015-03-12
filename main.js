@@ -18,8 +18,8 @@ var tough=1;
 if(source==null)
   source = Game.spawns.Spawn1.pos.findClosest(Game.SOURCES, {ignoreCreeps: true});
 
-if((Game.rooms[0].survivalInfo.wave/2)>1)
-  tough=Game.rooms[0].survivalInfo.wave/2;
+if((Game.spawns.Spawn1.room.survivalInfo.wave/2)>1)
+  tough=Game.spawns.Spawn1.room.survivalInfo.wave/2;
 
 
 for(var nom in Game.creeps) {
