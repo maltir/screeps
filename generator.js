@@ -20,7 +20,7 @@ module.exports = function(){
       guardParts[guardParts.length]=Game.ATTACK;
       guardParts[guardParts.length]=Game.ATTACK;
       guardParts[guardParts.length]=Game.ATTACK;
-      Game.spawns.Spawn1.createCreep(guardParts,null,{role: 'guard', puissance: count+"", dit:false});
+      Game.spawns.Spawn1.createCreep(guardParts,null,{role: 'guard'});
     }
   }
   nbHavester=0;
